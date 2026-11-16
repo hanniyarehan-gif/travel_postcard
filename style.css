@@ -1,9 +1,8 @@
-<!--Hanniya Rehan 26i-3185 D -->
 
 /* POSTCARD TRAILS */
-/* Shared CSS for all three pages */
+/* Shared Styling for All Three Pages */
 
-/* 1. General Settings */
+/* GENERAL SETTINGS */
 
 * {
     margin: 0;
@@ -43,12 +42,8 @@ a {
     text-decoration: none;
 }
 
-button,
-input {
-    font-family: inherit;
-}
 
-/* 2. Navigation */
+/* HEADER AND NAVIGATION */
 
 .header {
     width: 100%;
@@ -102,7 +97,8 @@ input {
     cursor: pointer;
 }
 
-/* 3. Common Typography */
+
+/* COMMON TYPOGRAPHY */
 
 .eyebrow {
     color: var(--blue);
@@ -138,7 +134,8 @@ p {
     color: var(--grey);
 }
 
-/* 4. Buttons */
+
+/* BUTTONS */
 
 .button {
     display: inline-block;
@@ -171,7 +168,8 @@ p {
     color: var(--white);
 }
 
-/* 5. Homepage Hero */
+
+/* HOMEPAGE HERO SECTION */
 
 .hero {
     padding: 70px 8%;
@@ -208,15 +206,6 @@ p {
     color: var(--grey);
 }
 
-.note-line {
-    display: inline-block;
-    width: 30px;
-    height: 2px;
-    background: var(--blue);
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
 .hero-image {
     position: relative;
 }
@@ -250,7 +239,8 @@ p {
     font-size: 14px;
 }
 
-/* 6. Introduction */
+
+/* INTRODUCTION */
 
 .introduction {
     text-align: center;
@@ -268,7 +258,8 @@ p {
     margin: auto;
 }
 
-/* 7. Common Section Layout */
+
+/* COMMON SECTION LAYOUT */
 
 .section {
     padding: 60px 8%;
@@ -296,7 +287,8 @@ p {
     color: var(--navy);
 }
 
-/* 8. Destination Cards */
+
+/* DESTINATION CARDS */
 
 .destination-grid {
     display: grid;
@@ -342,7 +334,8 @@ p {
     margin-bottom: 13px;
 }
 
-/* 9. Quote Section */
+
+/* QUOTE SECTION */
 
 .quote-section {
     background: var(--navy);
@@ -363,7 +356,8 @@ p {
     color: #8dc8ed;
 }
 
-/* 10. Page Banner */
+
+/* INNER PAGE BANNER */
 
 .page-banner {
     text-align: center;
@@ -384,15 +378,21 @@ p {
     margin: auto;
 }
 
-/* 11. Tables */
+
+/* DESTINATION AND FOOD TABLES */
 
 .table-section {
     padding: 55px 8%;
     background: var(--light-blue);
 }
 
+.table-section h2,
+.food-table-section h2 {
+    margin-bottom: 18px;
+}
+
 .table-description {
-    margin: -12px 0 22px;
+    margin-bottom: 22px;
 }
 
 .table-container {
@@ -431,7 +431,8 @@ tr:nth-child(even) {
     background: #f1f6fa;
 }
 
-/* 12. Page Closing */
+
+/* CLOSING SECTION */
 
 .page-closing {
     padding: 55px 8%;
@@ -446,7 +447,8 @@ tr:nth-child(even) {
     margin-bottom: 22px;
 }
 
-/* 13. Food Section */
+
+/* FOOD SECTION */
 
 .food-grid {
     display: grid;
@@ -487,16 +489,12 @@ tr:nth-child(even) {
     margin-bottom: 23px;
 }
 
-/* 14. Travel Tips */
+
+/* TRAVEL TIPS */
 
 .tips-section {
     padding: 60px 8%;
     background: var(--light-blue);
-    scroll-margin-top: 90px;
-}
-
-#food,
-#destinations {
     scroll-margin-top: 90px;
 }
 
@@ -522,7 +520,12 @@ tr:nth-child(even) {
     margin-bottom: 8px;
 }
 
-/* 15. Travel Checklist */
+#food {
+    scroll-margin-top: 90px;
+}
+
+
+/* TRAVEL CHECKLIST */
 
 .checklist-section {
     padding: 60px 8%;
@@ -569,7 +572,8 @@ tr:nth-child(even) {
     font-weight: 700;
 }
 
-/* 16. Footer */
+
+/* FOOTER */
 
 .footer {
     background: var(--navy);
@@ -597,7 +601,8 @@ tr:nth-child(even) {
     margin-top: 20px;
 }
 
-/* 17. Responsive Design */
+
+/* TABLET RESPONSIVE DESIGN */
 
 @media (max-width: 850px) {
 
@@ -650,7 +655,11 @@ tr:nth-child(even) {
     .page-banner {
         padding: 55px 8%;
     }
+
 }
+
+
+/* MOBILE RESPONSIVE DESIGN */
 
 @media (max-width: 550px) {
 
@@ -685,18 +694,5 @@ tr:nth-child(even) {
     .food-card {
         padding: 17px;
     }
+
 }
-
-
-  
-
-
-
-   
-   
-  
-
-  
-
-
-

@@ -1251,6 +1251,104 @@
 </body>
 </html>
 
+<script>
+
+// 1. Navigation Menu
+
+const menuButton = document.getElementById("menuButton");
+const navigation = document.getElementById("navigation");
+
+if (menuButton && navigation) {
+
+    menuButton.addEventListener("click", function() {
+
+        navigation.classList.toggle("show");
+
+        if (navigation.classList.contains("show")) {
+            menuButton.innerHTML = "✕";
+            menuButton.setAttribute("aria-expanded", "true");
+        }
+        else {
+            menuButton.innerHTML = "☰";
+            menuButton.setAttribute("aria-expanded", "false");
+        }
+
+    });
+
+    // Close menu after selecting a page
+
+    const navLinks = navigation.querySelectorAll("a");
+
+    navLinks.forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navigation.classList.remove("show");
+            menuButton.innerHTML = "☰";
+            menuButton.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
+}
+
+
+// 2. Display Current Year Automatically
+
+const yearElements = document.querySelectorAll(".current-year");
+
+yearElements.forEach(function(element) {
+
+    element.innerHTML = new Date().getFullYear();
+
+});
+
+
+// 3. Travel Checklist
+
+const checkboxes = document.querySelectorAll(".travel-check");
+
+const progress = document.getElementById("checklistProgress");
+
+function updateProgress() {
+
+    if (progress) {
+
+        let completed = 0;
+
+        checkboxes.forEach(function(checkbox) {
+
+            if (checkbox.checked) {
+                completed++;
+            }
+
+        });
+
+        progress.innerHTML =
+            completed + " out of " + checkboxes.length +
+            " items completed.";
+
+    }
+
+}
+
+
+// Update progress when a checkbox is selected
+
+checkboxes.forEach(function(checkbox) {
+
+    checkbox.addEventListener("change", updateProgress);
+
+});
+
+
+// Display initial checklist progress
+
+updateProgress();
+
+</script>
+
 
 </body>
 </html>

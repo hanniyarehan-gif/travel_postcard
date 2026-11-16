@@ -1,8 +1,9 @@
 
 /* POSTCARD TRAILS */
-/* Shared Styling for All Three Pages */
+/* SHARED CSS FOR ALL THREE WEBPAGES */
 
-/* GENERAL SETTINGS */
+
+/* 1. GENERAL SETTINGS */
 
 * {
     margin: 0;
@@ -43,7 +44,7 @@ a {
 }
 
 
-/* HEADER AND NAVIGATION */
+/* 2. HEADER AND NAVIGATION */
 
 .header {
     width: 100%;
@@ -98,7 +99,7 @@ a {
 }
 
 
-/* COMMON TYPOGRAPHY */
+/* 3. COMMON TYPOGRAPHY */
 
 .eyebrow {
     color: var(--blue);
@@ -135,7 +136,7 @@ p {
 }
 
 
-/* BUTTONS */
+/* 4. BUTTONS */
 
 .button {
     display: inline-block;
@@ -146,30 +147,30 @@ p {
     transition: 0.3s;
 }
 
-.button-primary {
+.primary-button {
     background: var(--blue);
     color: var(--white);
     border: 1px solid var(--blue);
 }
 
-.button-primary:hover {
+.primary-button:hover {
     background: var(--navy);
     border-color: var(--navy);
 }
 
-.button-outline {
+.outline-button {
     background: transparent;
     border: 1px solid var(--blue);
     color: var(--blue);
 }
 
-.button-outline:hover {
+.outline-button:hover {
     background: var(--blue);
     color: var(--white);
 }
 
 
-/* HOMEPAGE HERO SECTION */
+/* 5. HOMEPAGE HERO SECTION */
 
 .hero {
     padding: 70px 8%;
@@ -240,7 +241,7 @@ p {
 }
 
 
-/* INTRODUCTION */
+/* 6. INTRODUCTION */
 
 .introduction {
     text-align: center;
@@ -259,7 +260,7 @@ p {
 }
 
 
-/* COMMON SECTION LAYOUT */
+/* 7. COMMON SECTION LAYOUT */
 
 .section {
     padding: 60px 8%;
@@ -288,7 +289,7 @@ p {
 }
 
 
-/* DESTINATION CARDS */
+/* 8. DESTINATION CARDS */
 
 .destination-grid {
     display: grid;
@@ -335,7 +336,7 @@ p {
 }
 
 
-/* QUOTE SECTION */
+/* 9. QUOTE SECTION */
 
 .quote-section {
     background: var(--navy);
@@ -357,7 +358,7 @@ p {
 }
 
 
-/* INNER PAGE BANNER */
+/* 10. PAGE BANNER */
 
 .page-banner {
     text-align: center;
@@ -379,7 +380,7 @@ p {
 }
 
 
-/* DESTINATION AND FOOD TABLES */
+/* 11. TABLES */
 
 .table-section {
     padding: 55px 8%;
@@ -432,7 +433,7 @@ tr:nth-child(even) {
 }
 
 
-/* CLOSING SECTION */
+/* 12. CLOSING SECTION */
 
 .page-closing {
     padding: 55px 8%;
@@ -448,7 +449,7 @@ tr:nth-child(even) {
 }
 
 
-/* FOOD SECTION */
+/* 13. FOOD SECTION */
 
 .food-grid {
     display: grid;
@@ -490,7 +491,7 @@ tr:nth-child(even) {
 }
 
 
-/* TRAVEL TIPS */
+/* 14. TRAVEL TIPS */
 
 .tips-section {
     padding: 60px 8%;
@@ -525,7 +526,7 @@ tr:nth-child(even) {
 }
 
 
-/* TRAVEL CHECKLIST */
+/* 15. TRAVEL CHECKLIST */
 
 .checklist-section {
     padding: 60px 8%;
@@ -573,7 +574,7 @@ tr:nth-child(even) {
 }
 
 
-/* FOOTER */
+/* 16. FOOTER */
 
 .footer {
     background: var(--navy);
@@ -602,7 +603,7 @@ tr:nth-child(even) {
 }
 
 
-/* TABLET RESPONSIVE DESIGN */
+/* 17. TABLET RESPONSIVE DESIGN */
 
 @media (max-width: 850px) {
 
@@ -659,7 +660,7 @@ tr:nth-child(even) {
 }
 
 
-/* MOBILE RESPONSIVE DESIGN */
+/* 18. MOBILE RESPONSIVE DESIGN */
 
 @media (max-width: 550px) {
 

@@ -1,10 +1,648 @@
 <!--Hanniya Rehan 26i-3185 D -->
- body {
-  background-color: whitesmoke;
+
+/* Student: Hanniya Rehan | Roll No: 26i-3185 D */
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+:root {
+    --blue: #176da5;
+    --light-blue: #eaf4fb;
+    --navy: #101d2c;
+    --white: #ffffff;
+    --text: #263746;
+    --grey: #647482;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text);
+    font-family: Verdana, sans-serif;
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+/* Navigation Bar */
+.header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    border-bottom: 1px solid #e5edf3;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--navy);
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navigation a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: var(--blue);
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--navy);
+    cursor: pointer;
+}
+
+/* General Headings */
+h1, h2, h3 {
+    color: var(--navy);
+    line-height: 1.3;
+}
+
 h1 {
-  color: blue;
+    font-size: 48px;
 }
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 p {
-  color: red;
+    color: var(--grey);
 }
+
+.small-heading {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Home Hero */
+.hero {
+    background-color: var(--light-blue);
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span,
+.page-banner h1 span {
+    color: var(--blue);
+}
+
+.hero-description {
+    max-width: 530px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+}
+
+.hero-image img {
+    height: 370px;
+    border-radius: 12px;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background: var(--white);
+    padding: 12px 18px;
+    border-radius: 6px;
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.image-label span {
+    color: var(--blue);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    border: 2px solid var(--blue);
+    padding: 11px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-button {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.primary-button:hover {
+    background-color: var(--navy);
+    border-color: var(--navy);
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--blue);
+}
+
+.secondary-button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/* Introduction Section */
+.intro-section {
+    text-align: center;
+    padding: 65px 15%;
+}
+
+.intro-section h2 {
+    max-width: 650px;
+    margin: 0 auto 18px;
+}
+
+.intro-section p:last-child {
+    max-width: 650px;
+    margin: auto;
+}
+
+/* General Sections */
+.section {
+    padding: 65px 8%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    gap: 15px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+.text-link {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.text-link:hover {
+    color: var(--navy);
+}
+
+/* Destination Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.travel-card {
+    background-color: var(--white);
+    border: 1px solid #e5edf3;
+    border-radius: 9px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.travel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(16, 29, 44, 0.10);
+}
+
+.travel-card img {
+    height: 215px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content p:not(.card-category) {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.card-category {
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+/* Quote Section */
+.quote-section {
+    background-color: var(--navy);
+    padding: 55px 12%;
+    text-align: center;
+}
+
+.quote-section h2 {
+    color: var(--white);
+    font-size: 29px;
+}
+
+.quote-section > p:last-child {
+    color: #c5d8e8;
+}
+
+.quote-section .small-heading {
+    color: #8dc9ef;
+}
+
+/* Newsletter */
+.newsletter {
+    background-color: var(--light-blue);
+    padding: 50px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+.newsletter h2 {
+    margin-bottom: 8px;
+}
+
+.newsletter p {
+    font-size: 13px;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 450px;
+}
+
+.subscribe-form input {
+    padding: 13px;
+    border: 1px solid #cbdbe7;
+    border-radius: 5px;
+    min-width: 220px;
+    outline: none;
+}
+
+.subscribe-form input:focus {
+    border-color: var(--blue);
+}
+
+.subscribe-form .form-message {
+    flex-basis: 100%;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+/* Other Page Banners */
+.page-banner {
+    background-color: var(--light-blue);
+    text-align: center;
+    padding: 70px 15%;
+}
+
+.page-banner h1 {
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.page-banner p:last-child {
+    max-width: 650px;
+    margin: auto;
+}
+
+/* Search Box */
+.search-box {
+    max-width: 450px;
+    margin: 0 auto 35px;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 45px 14px 18px;
+    border: 1px solid #cbdbe7;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: var(--blue);
+}
+
+.search-box span {
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    font-size: 25px;
+    color: var(--blue);
+}
+
+.no-results {
+    display: none;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Destination Table */
+.table-section {
+    background-color: var(--light-blue);
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border: 1px solid #dce6ee;
+    font-size: 13px;
+}
+
+th {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+tr:nth-child(even) {
+    background-color: #f1f6fa;
+}
+
+/* Food Page */
+.destination-grid {
+    align-items: stretch;
+}
+
+/* Travel Tips */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.tip-card {
+    background-color: var(--light-blue);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e1ebf3;
+}
+
+.tip-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.tip-card p {
+    font-size: 13px;
+}
+
+/* Checklist */
+.checklist-section {
+    background-color: var(--light-blue);
+    padding: 55px 8%;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.checklist-content {
+    flex: 1;
+}
+
+.checklist-image {
+    flex: 1;
+}
+
+.checklist-image img {
+    height: 340px;
+    border-radius: 10px;
+}
+
+.checklist {
+    margin-top: 20px;
+    display: grid;
+    gap: 13px;
+}
+
+.checklist label {
+    background-color: var(--white);
+    padding: 11px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.checklist input {
+    margin-right: 10px;
+    accent-color: var(--blue);
+}
+
+.progress-message {
+    margin-top: 18px;
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--navy);
+    text-align: center;
+    padding: 35px 8%;
+}
+
+.footer .logo {
+    color: var(--white);
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer .logo span {
+    color: #8dc9ef;
+}
+
+.footer p {
+    color: #c5d8e8;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.footer .copyright {
+    border-top: 1px solid #334557;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+/* Mobile and Tablet Layout */
+@media (max-width: 850px) {
+
+    .header {
+        padding: 16px 5%;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        border-bottom: 1px solid #e5edf3;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .navigation a {
+        width: 100%;
+        padding: 13px 6%;
+        border-top: 1px solid #edf1f4;
+    }
+
+    .hero {
+        padding: 50px 6%;
+        flex-direction: column;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .card-grid,
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter,
+    .checklist-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .intro-section {
+        padding: 50px 8%;
+    }
+}
+
+@media (max-width: 550px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .hero-text h1 {
+        font-size: 37px;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+
+    .page-banner {
+        padding: 50px 7%;
+    }
+
+    .page-banner h1 {
+        font-size: 32px

@@ -1,8 +1,10 @@
 <!--Hanniya Rehan 26i-3185 D -->
 
-/* Student: Hanniya Rehan | Roll No: 26i-3185 D */
+/* POSTCARD TRAILS */
+/* Shared CSS for all three pages */
 
-/* General Settings */
+/* 1. General Settings */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +12,13 @@
 }
 
 :root {
+    --navy: #102438;
     --blue: #176da5;
-    --light-blue: #eaf4fb;
-    --navy: #101d2c;
+    --light-blue: #edf5fa;
     --white: #ffffff;
     --text: #263746;
-    --grey: #647482;
+    --grey: #697987;
+    --border: #dce6ee;
 }
 
 html {
@@ -23,21 +26,21 @@ html {
 }
 
 body {
-    background-color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
     color: var(--text);
-    font-family: Verdana, sans-serif;
-    line-height: 1.7;
+    background: var(--white);
 }
 
 img {
-    width: 100%;
     display: block;
+    width: 100%;
     object-fit: cover;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 button,
@@ -45,24 +48,27 @@ input {
     font-family: inherit;
 }
 
-/* Navigation Bar */
+/* 2. Navigation */
+
 .header {
-    background-color: var(--white);
+    width: 100%;
+    min-height: 76px;
+    padding: 0 8%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    border-bottom: 1px solid #e5edf3;
+    justify-content: space-between;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1px;
     color: var(--navy);
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: -1px;
 }
 
 .logo span {
@@ -71,14 +77,14 @@ input {
 
 .navigation {
     display: flex;
-    gap: 30px;
     align-items: center;
+    gap: 30px;
 }
 
 .navigation a {
     color: var(--text);
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
     transition: 0.3s;
 }
 
@@ -89,166 +95,191 @@ input {
 
 .menu-button {
     display: none;
-    background: none;
     border: none;
-    font-size: 25px;
+    background: none;
     color: var(--navy);
+    font-size: 27px;
     cursor: pointer;
 }
 
-/* General Headings */
-h1, h2, h3 {
-    color: var(--navy);
-    line-height: 1.3;
+/* 3. Common Typography */
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 750;
+    color: var(--navy);
 }
 
 h2 {
     font-size: 30px;
-    margin-bottom: 18px;
+    line-height: 1.3;
+    color: var(--navy);
+    font-weight: 700;
 }
 
 h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 19px;
+    line-height: 1.4;
+    color: var(--navy);
+    font-weight: 700;
 }
 
 p {
+    font-size: 14px;
     color: var(--grey);
 }
 
-.small-heading {
+/* 4. Buttons */
+
+.button {
+    display: inline-block;
+    padding: 12px 21px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.button-primary {
+    background: var(--blue);
+    color: var(--white);
+    border: 1px solid var(--blue);
+}
+
+.button-primary:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+}
+
+.button-outline {
+    background: transparent;
+    border: 1px solid var(--blue);
     color: var(--blue);
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
 }
 
-/* Home Hero */
+.button-outline:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+/* 5. Homepage Hero */
+
 .hero {
-    background-color: var(--light-blue);
-    padding: 75px 8%;
-    display: flex;
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+    gap: 55px;
+    background: var(--light-blue);
 }
 
-.hero-text {
-    flex: 1;
+.hero-content {
+    max-width: 560px;
 }
 
-.hero-text h1 {
-    font-size: 55px;
-    margin-bottom: 20px;
-}
-
-.hero-text h1 span,
-.page-banner h1 span {
+.hero h1 span {
     color: var(--blue);
 }
 
 .hero-description {
-    max-width: 530px;
-    margin-bottom: 28px;
+    max-width: 480px;
+    margin-top: 20px;
+    margin-bottom: 27px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
     flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-note {
+    margin-top: 30px;
+    font-size: 12px;
+    color: var(--grey);
+}
+
+.note-line {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background: var(--blue);
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 .hero-image {
-    flex: 1;
     position: relative;
 }
 
 .hero-image img {
-    height: 370px;
-    border-radius: 12px;
+    height: 380px;
+    border-radius: 8px;
 }
 
-.image-label {
+.image-caption {
     position: absolute;
     bottom: 15px;
     left: 15px;
     right: 15px;
-    background: var(--white);
-    padding: 12px 18px;
-    border-radius: 6px;
-    color: var(--navy);
-    font-weight: bold;
-    font-size: 13px;
-}
-
-.image-label span {
-    color: var(--blue);
-}
-
-/* Buttons */
-.button {
-    display: inline-block;
-    border: 2px solid var(--blue);
-    padding: 11px 22px;
+    padding: 14px 18px;
     border-radius: 5px;
-    font-weight: bold;
-    font-size: 13px;
-    cursor: pointer;
-    transition: 0.3s;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
 }
 
-.primary-button {
-    background-color: var(--blue);
-    color: var(--white);
-}
-
-.primary-button:hover {
-    background-color: var(--navy);
-    border-color: var(--navy);
-}
-
-.secondary-button {
-    background-color: transparent;
+.image-caption span {
     color: var(--blue);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
 }
 
-.secondary-button:hover {
-    background-color: var(--blue);
-    color: var(--white);
+.image-caption strong {
+    color: var(--navy);
+    font-size: 14px;
 }
 
-/* Introduction Section */
-.intro-section {
+/* 6. Introduction */
+
+.introduction {
     text-align: center;
-    padding: 65px 15%;
+    max-width: 780px;
+    margin: auto;
+    padding: 65px 30px;
 }
 
-.intro-section h2 {
-    max-width: 650px;
-    margin: 0 auto 18px;
+.introduction h2 {
+    margin-bottom: 16px;
 }
 
-.intro-section p:last-child {
-    max-width: 650px;
+.introduction > p:last-child {
+    max-width: 680px;
     margin: auto;
 }
 
-/* General Sections */
+/* 7. Common Section Layout */
+
 .section {
-    padding: 65px 8%;
+    padding: 60px 8%;
 }
 
 .section-heading {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 20px;
     margin-bottom: 28px;
-    gap: 15px;
 }
 
 .section-heading h2 {
@@ -258,311 +289,320 @@ p {
 .text-link {
     color: var(--blue);
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .text-link:hover {
     color: var(--navy);
 }
 
-/* Destination Cards */
-.card-grid {
+/* 8. Destination Cards */
+
+.destination-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
 }
 
-.travel-card {
-    background-color: var(--white);
-    border: 1px solid #e5edf3;
-    border-radius: 9px;
+.destination-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 7px;
     overflow: hidden;
     transition: 0.3s;
 }
 
-.travel-card:hover {
+.destination-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(16, 29, 44, 0.10);
+    box-shadow: 0 9px 22px rgba(16, 36, 56, 0.10);
 }
 
-.travel-card img {
-    height: 215px;
+.destination-card img {
+    height: 210px;
 }
 
 .card-content {
     padding: 20px;
 }
 
-.card-content p:not(.card-category) {
-    font-size: 13px;
-    margin-bottom: 15px;
-}
-
-.card-category {
+.card-label {
     color: var(--blue);
     font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
     margin-bottom: 8px;
 }
 
-/* Quote Section */
+.card-content h3 {
+    margin-bottom: 9px;
+}
+
+.card-content p:not(.card-label) {
+    min-height: 65px;
+    margin-bottom: 13px;
+}
+
+/* 9. Quote Section */
+
 .quote-section {
-    background-color: var(--navy);
-    padding: 55px 12%;
+    background: var(--navy);
     text-align: center;
+    padding: 55px 8%;
 }
 
 .quote-section h2 {
     color: var(--white);
-    font-size: 29px;
+    margin-bottom: 13px;
 }
 
-.quote-section > p:last-child {
-    color: #c5d8e8;
+.quote-section p:last-child {
+    color: #c7d7e5;
 }
 
-.quote-section .small-heading {
-    color: #8dc9ef;
+.quote-section .eyebrow {
+    color: #8dc8ed;
 }
 
-/* Newsletter */
-.newsletter {
-    background-color: var(--light-blue);
-    padding: 50px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 35px;
-}
+/* 10. Page Banner */
 
-.newsletter h2 {
-    margin-bottom: 8px;
-}
-
-.newsletter p {
-    font-size: 13px;
-}
-
-.subscribe-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 450px;
-}
-
-.subscribe-form input {
-    padding: 13px;
-    border: 1px solid #cbdbe7;
-    border-radius: 5px;
-    min-width: 220px;
-    outline: none;
-}
-
-.subscribe-form input:focus {
-    border-color: var(--blue);
-}
-
-.subscribe-form .form-message {
-    flex-basis: 100%;
-    color: var(--blue);
-    font-weight: bold;
-}
-
-/* Other Page Banners */
 .page-banner {
-    background-color: var(--light-blue);
     text-align: center;
-    padding: 70px 15%;
+    padding: 65px 12%;
+    background: var(--light-blue);
 }
 
 .page-banner h1 {
-    font-size: 43px;
     margin-bottom: 15px;
 }
 
-.page-banner p:last-child {
-    max-width: 650px;
-    margin: auto;
-}
-
-/* Search Box */
-.search-box {
-    max-width: 450px;
-    margin: 0 auto 35px;
-    position: relative;
-}
-
-.search-box input {
-    width: 100%;
-    padding: 14px 45px 14px 18px;
-    border: 1px solid #cbdbe7;
-    border-radius: 5px;
-    font-size: 14px;
-    outline: none;
-}
-
-.search-box input:focus {
-    border-color: var(--blue);
-}
-
-.search-box span {
-    position: absolute;
-    right: 15px;
-    top: 7px;
-    font-size: 25px;
+.page-banner h1 span {
     color: var(--blue);
 }
 
-.no-results {
-    display: none;
-    text-align: center;
-    margin-top: 25px;
+.page-banner > p:last-child {
+    max-width: 680px;
+    margin: auto;
 }
 
-/* Destination Table */
+/* 11. Tables */
+
 .table-section {
-    background-color: var(--light-blue);
+    padding: 55px 8%;
+    background: var(--light-blue);
+}
+
+.table-description {
+    margin: -12px 0 22px;
 }
 
 .table-container {
+    width: 100%;
     overflow-x: auto;
-    margin-top: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: var(--white);
+    background: var(--white);
+    min-width: 600px;
 }
 
-th, td {
-    padding: 16px;
+th,
+td {
+    padding: 16px 18px;
     text-align: left;
-    border: 1px solid #dce6ee;
     font-size: 13px;
+    border-bottom: 1px solid var(--border);
 }
 
 th {
-    background-color: var(--navy);
+    background: var(--navy);
     color: var(--white);
+    font-weight: 700;
+}
+
+td {
+    color: var(--text);
 }
 
 tr:nth-child(even) {
-    background-color: #f1f6fa;
+    background: #f1f6fa;
 }
 
-/* Food Page */
-.destination-grid {
-    align-items: stretch;
+/* 12. Page Closing */
+
+.page-closing {
+    padding: 55px 8%;
+    text-align: center;
 }
 
-/* Travel Tips */
+.page-closing h2 {
+    margin-bottom: 10px;
+}
+
+.page-closing p {
+    margin-bottom: 22px;
+}
+
+/* 13. Food Section */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.food-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 23px;
+    background: var(--light-blue);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+.food-symbol {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--white);
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+}
+
+.food-card h3 {
+    margin-bottom: 7px;
+}
+
+.food-table-section {
+    margin-top: 55px;
+}
+
+.food-table-section h2 {
+    margin-bottom: 23px;
+}
+
+/* 14. Travel Tips */
+
+.tips-section {
+    padding: 60px 8%;
+    background: var(--light-blue);
+    scroll-margin-top: 90px;
+}
+
+#food,
+#destinations {
+    scroll-margin-top: 90px;
+}
+
 .tips-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    margin-top: 25px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
 }
 
 .tip-card {
-    background-color: var(--light-blue);
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #e1ebf3;
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
 }
 
-.tip-icon {
-    font-size: 30px;
-    margin-bottom: 15px;
+.tip-symbol {
+    font-size: 26px;
+    margin-bottom: 12px;
 }
 
-.tip-card p {
-    font-size: 13px;
+.tip-card h3 {
+    margin-bottom: 8px;
 }
 
-/* Checklist */
+/* 15. Travel Checklist */
+
 .checklist-section {
-    background-color: var(--light-blue);
-    padding: 55px 8%;
-    display: flex;
-    align-items: center;
-    gap: 45px;
+    padding: 60px 8%;
 }
 
 .checklist-content {
-    flex: 1;
+    max-width: 750px;
+    margin: auto;
 }
 
-.checklist-image {
-    flex: 1;
-}
-
-.checklist-image img {
-    height: 340px;
-    border-radius: 10px;
+.checklist-content h2 {
+    margin-bottom: 10px;
 }
 
 .checklist {
-    margin-top: 20px;
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 13px;
+    margin-top: 25px;
 }
 
 .checklist label {
-    background-color: var(--white);
-    padding: 11px 15px;
+    padding: 13px 15px;
+    background: var(--light-blue);
+    border: 1px solid var(--border);
     border-radius: 5px;
+    font-size: 13px;
     cursor: pointer;
-    font-size: 14px;
 }
 
 .checklist input {
-    margin-right: 10px;
     accent-color: var(--blue);
+    margin-right: 9px;
+}
+
+.checklist label:has(input:checked) {
+    background: #dceefa;
+    text-decoration: line-through;
 }
 
 .progress-message {
     margin-top: 18px;
     color: var(--blue);
-    font-weight: bold;
-    font-size: 13px;
+    font-weight: 700;
 }
 
-/* Footer */
+/* 16. Footer */
+
 .footer {
-    background-color: var(--navy);
+    background: var(--navy);
     text-align: center;
-    padding: 35px 8%;
+    padding: 32px 8%;
 }
 
 .footer .logo {
     color: var(--white);
-    display: inline-block;
-    margin-bottom: 10px;
 }
 
 .footer .logo span {
-    color: #8dc9ef;
+    color: #8dc8ed;
 }
 
 .footer p {
-    color: #c5d8e8;
+    color: #c7d7e5;
+    margin-top: 9px;
     font-size: 12px;
-    margin-top: 8px;
 }
 
 .footer .copyright {
-    border-top: 1px solid #334557;
+    border-top: 1px solid #34485c;
     padding-top: 15px;
     margin-top: 20px;
 }
 
-/* Mobile and Tablet Layout */
+/* 17. Responsive Design */
+
 @media (max-width: 850px) {
 
     .header {
-        padding: 16px 5%;
+        padding: 15px 5%;
     }
 
     .menu-button {
@@ -572,14 +612,14 @@ tr:nth-child(even) {
     .navigation {
         display: none;
         position: absolute;
-        top: 100%;
         left: 0;
+        top: 100%;
         width: 100%;
-        background-color: var(--white);
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
-        border-bottom: 1px solid #e5edf3;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
     }
 
     .navigation.show {
@@ -589,60 +629,74 @@ tr:nth-child(even) {
     .navigation a {
         width: 100%;
         padding: 13px 6%;
-        border-top: 1px solid #edf1f4;
+        border-top: 1px solid var(--border);
     }
 
     .hero {
-        padding: 50px 6%;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 45px 7%;
     }
 
-    .hero-text,
-    .hero-image {
-        width: 100%;
+    .hero-image img {
+        height: 320px;
     }
 
-    .hero-text h1 {
-        font-size: 42px;
-    }
-
-    .card-grid,
+    .destination-grid,
     .tips-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .newsletter,
-    .checklist-section {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .intro-section {
-        padding: 50px 8%;
+    .page-banner {
+        padding: 55px 8%;
     }
 }
 
 @media (max-width: 550px) {
 
     h1 {
-        font-size: 36px;
+        font-size: 35px;
     }
 
     h2 {
         font-size: 25px;
     }
 
-    .hero-text h1 {
-        font-size: 37px;
-    }
-
     .hero-image img {
-        height: 250px;
+        height: 245px;
     }
 
-    .page-banner {
-        padding: 50px 7%;
+    .destination-grid,
+    .food-grid,
+    .tips-grid,
+    .checklist {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     .page-banner h1 {
-        font-size: 32px
+        font-size: 34px;
+    }
+
+    .food-card {
+        padding: 17px;
+    }
+}
+
+
+  
+
+
+
+   
+   
+  
+
+  
+
+
+

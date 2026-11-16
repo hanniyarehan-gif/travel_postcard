@@ -1,0 +1,13 @@
+prompt 1:
+| Travel postcard | Home, Places to Visit, Food, Travel Tips |
+| --------------- | ---------------------------------------- |
+
+Your website must stay on the same theme as your Lab 11 page. You need at least three pages, and one of them must be your home page, saved as index.html. To decide on your pages, give the AI your Lab 11 code files and a short description of your theme, and ask it to suggest suitable pages. The table below also gives some ideas for each theme. You are free to choose the pages that suit your website best.Okay GPT, I have provided you a few HTML index document and style CSS document. I want to create a website, and that website will be about travel postcards. So please make sure that you create a website according to the prompt that I gave you above, as I want the website to be of three pages with the options and the website interface as I mentioned in the travel postcard description. I want the website theme to be of, like, blue, white, and majorly black, but it should be of, like, blue color and white, and you can add a little touch of black as well. Also, make it a good website, create a very suitable-looking website to have.
+  result: it created a website according to the requirements above but the font size was inconsistent.
+  prompt 2:
+Okay, listen, I have actually opened the website, and it is actually the font size is very, like, inconsistent, and also it is not according to the way I wanted it. I want it to be, like, professional. It should create a very appealing and attractive homepage, and the words should be aligned, the font sizes should be consistent, and everything should be like a professional website, as if I have made it. So make it according to that. It is such a random website that you've given me the code. So give me the code again that actually makes the font size well organized, and it gives the tables for the different, you know, places to visit and etc., etc. So please do that.
+  result: adjusted the font size.
+  prompt 3:
+  Um, okay, I have created a branch now inside the main folder, and I want to create a page of contact us. So can you give me the code for that? And please give me that code only of the branch.
+    result: created a contact us page inside the main folder.
+    
